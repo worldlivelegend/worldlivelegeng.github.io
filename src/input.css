@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-hover {
+    @apply hover:transition-all hover:text-red-600 transition-all
+}
