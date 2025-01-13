@@ -1,0 +1,14 @@
+@use "_header";
+@use "_top-block__main";
+@use "_main";
+@use "_quote-section";
+@use "_clients-section";
+@use "_grey-bg-section";
+@use "_footer";
+@use "_reset";
+@use "_variables" as *;
+
+
+* {
+  font-family: Montserrat, sans-serif;
+}

@@ -1,0 +1,60 @@
+@use "_variables" as *;
+
+footer {
+  padding-top: 30px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template: 1fr 1fr/1fr 1fr;
+  align-items: center;
+  gap: 10px;
+  padding-block: 30px;
+
+  &__address a {
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+
+  &__address, &__contact {
+    @include display-flex;
+    gap: 10px;
+    grid-column: 1;
+  }
+
+  &__contact {
+    grid-column: 1/3;
+
+    &__phone {
+      font-weight: bold;
+    }
+  }
+
+  &__since {
+    display: flex;
+    justify-content: flex-end;
+    grid-row: 1;
+    grid-column: 2;
+    color: $dark-gray;
+  }
+}
+
+@media screen and (max-width: 526px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    &__address, &__contact, &__since {
+      grid-column: 1;
+      justify-content: center;
+    }
+
+    &__since {
+      grid-row: 3;
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+}

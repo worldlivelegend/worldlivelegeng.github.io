@@ -1,0 +1,65 @@
+@use "_variables" as *;
+
+.services__button {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $blue;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 700;
+}
+
+.main-block__h {
+  color: transparent;
+  background: $red-gradient;
+  background-clip: text;
+  font-size: $huge-text;
+  line-height: 46px;
+}
+
+.main-block__grid {
+  padding-block: 60px;
+  display: grid;
+  grid-template: repeat(2, 1fr)/repeat(3, 1fr);
+  gap: 60px;
+}
+
+.grid__container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  &__img-div {
+    @include display-flex;
+    justify-content: center;
+    background-color: white;
+    border-radius: 24px;
+    width: 92px;
+    height: 92px;
+  }
+
+  h3 {
+    font-size: 22px;
+    line-height: 26px;
+    color: $blue;
+  }
+
+  p {
+    max-width: 400px;
+    line-height: 26px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .main-block__grid {
+    grid-template: repeat(3, 1fr)/repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 405px){
+  .main-block__grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 30px;
+  }
+}

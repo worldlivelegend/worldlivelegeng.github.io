@@ -1,0 +1,117 @@
+@use 'variables' as *;
+
+.top-block {
+  padding-block: 80px 60px;
+  @include display-flex;
+  gap: 60px;
+  justify-content: center;
+
+  .line {
+    min-width: 5px;
+  }
+
+  .hide-line {
+    display: none;
+  }
+
+  &__left-part {
+    ol {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    li {
+      text-align: end;
+      list-style: none;
+      text-wrap: nowrap;
+      font-size: $huge-text;
+      color: $dark-gray;
+      font-weight: $bold;
+      line-height: 36px;
+      transition: 0.2s;
+    }
+
+    &__hover:hover {
+      color: $red;
+      transition: 0.3s;
+    }
+  }
+
+  &__right-part {
+    h2 {
+      font-size: 30px;
+      font-weight: $bold;
+      padding-bottom: 15px;
+    }
+
+    p {
+      max-width: 580px;
+      font-size: $big-text;
+      padding-top: 15px;
+      line-height: 30px;
+    }
+  }
+}
+
+.container-gradient .top-block .top-block__left-part__gradient {
+    background: $red_gradient;
+    color: transparent;
+    background-clip: text;
+}
+
+@media screen and (max-width: 1240px) {
+  .top-block {
+    flex-direction: column;
+
+    .line {
+      display: none;
+    }
+
+    .hide-line {
+      display: block;
+    }
+
+    ol {
+      align-items: center;
+    }
+  }
+}
+
+@media screen and (max-width: 768px){
+  .top-block {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-block: 0 60px;
+
+    .line {
+      display: none
+    }
+
+    .hide-line {
+      display: block;
+    }
+
+    ol {
+      flex-direction: row;
+      justify-content: flex-start;
+      overflow-x: scroll;
+      scrollbar-width: thin;
+      align-items: flex-start;
+      padding: 0;
+    }
+
+    li {
+      font-size: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .top-block {
+    li {
+      font-size: 30px;
+      text-align: start;
+    }
+  }
+}

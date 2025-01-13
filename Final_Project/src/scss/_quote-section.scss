@@ -1,0 +1,111 @@
+@use "_variables" as *;
+
+.quote-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 60px;
+
+  &__dots {
+    display: flex;
+    gap: 15px;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    height: auto;
+
+    img {
+      width: 40%;
+      object-fit: cover;
+    }
+
+    &__text-block {
+      padding: 15px;
+      background-color: #f5f5fa;
+      max-width: 900px;
+      display: flex;
+      flex-direction: column;
+
+      a {
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: $bold;
+        line-height: 17px;
+      }
+
+      h2 {
+        color: transparent;
+        background: $red-gradient;
+        background-clip: text;
+        font-size: $huge-text;
+        line-height: 46px;
+        padding-bottom: 15px;
+      }
+
+      &__name {
+        font-size: $regular-text;
+        font-weight: $bold;
+        color: $dark-gray;
+      }
+
+      &__position {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+        color: #B3B3BA;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1920px){
+  .quote-section {
+    padding-inline: 160px;
+  }
+}
+
+@media screen and (max-width: 800px){
+  .quote-section__block {
+    flex-wrap: wrap;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 400px){
+  .quote-section__block {
+    h2 {
+      font-size: 30px;
+      line-height: 35px;
+    }
+  }
+}
+
+@media screen and (max-width: 300px){
+  .quote-section__block {
+    img {
+      width: 200px;
+    }
+
+    &__text-block {
+      width: 200px;
+    }
+  }
+}
+
+@media screen and (max-width: 200px){
+  .quote-section__block {
+    &__text-block {
+      width: 100px;
+    }
+  }
+}

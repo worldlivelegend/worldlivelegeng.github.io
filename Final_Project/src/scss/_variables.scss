@@ -1,0 +1,18 @@
+$blue_gradient: linear-gradient(to top right, #323264, #643E72);
+$red_gradient: linear-gradient(to left, #EF8080, #F0145A);
+$red: #F0145A;
+$blue: #24A3FF;
+$dark-gray: #B3B3BA;
+$small-text: 14px;
+$regular-text: 16px;
+$big-text: 20px;
+$huge-text: 38px;
+$bold: 700;
+
+@mixin display-flex {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+}
+
